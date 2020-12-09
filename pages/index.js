@@ -3,7 +3,7 @@ import AliceCarousel from "react-alice-carousel";
 
 import "react-alice-carousel/lib/alice-carousel.css";
 
-const HomePage = () => {
+const ImageCarousel = ({ items }) => {
   const [windowSize, setWindowSize] = useState();
 
   let height = "320px";
@@ -47,29 +47,29 @@ const HomePage = () => {
     1024: { items: 2 },
   };
 
-  const items = [
-    <img
-      src="/Big%20Daddy.jpg"
-      alt="Big Daddy"
-      onDragStart={handleDragStart}
-      className="image-carousel"
-      style={{ height: height, width: width, objectFit: "cover" }}
-    />,
-    <img
-      src="/Big%20Sister.jpg"
-      alt="Big Sister"
-      onDragStart={handleDragStart}
-      className="image-carousel"
-      style={{ height: height, width: width, objectFit: "cover" }}
-    />,
-    <img
-      src="/Columbia.jpg"
-      alt="Columbia"
-      onDragStart={handleDragStart}
-      className="image-carousel"
-      style={{ height: height, width: width, objectFit: "cover" }}
-    />,
-  ];
+  // const items = [
+  //   <img
+  //     src="/Big%20Daddy.jpg"
+  //     alt="Big Daddy"
+  //     onDragStart={handleDragStart}
+  //     className="image-carousel"
+  //     style={{ height: height, width: width, objectFit: "cover" }}
+  //   />,
+  //   <img
+  //     src="/Big%20Sister.jpg"
+  //     alt="Big Sister"
+  //     onDragStart={handleDragStart}
+  //     className="image-carousel"
+  //     style={{ height: height, width: width, objectFit: "cover" }}
+  //   />,
+  //   <img
+  //     src="/Columbia.jpg"
+  //     alt="Columbia"
+  //     onDragStart={handleDragStart}
+  //     className="image-carousel"
+  //     style={{ height: height, width: width, objectFit: "cover" }}
+  //   />,
+  // ];
 
   return (
     <React.Fragment>
@@ -89,7 +89,7 @@ const HomePage = () => {
 
       <style jsx>{`
         div {
-          width: 85%;
+          width: 75%;
           height: 400px;
           margin: 200px auto 0;
         }
@@ -98,4 +98,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default ImageCarousel;
