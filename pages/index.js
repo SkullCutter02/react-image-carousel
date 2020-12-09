@@ -10,6 +10,10 @@ const HomePage = () => {
   let width = "500x";
 
   useEffect(() => {
+    setWindowSize(window.innerWidth);
+  }, []);
+
+  useEffect(() => {
     window.addEventListener("resize", () => {
       setWindowSize(window.innerWidth);
 
@@ -22,7 +26,7 @@ const HomePage = () => {
   });
 
   useEffect(() => {
-    console.log(windowSize);
+    // console.log(windowSize);
     const images = Array.from(
       document.getElementsByClassName("image-carousel")
     );
